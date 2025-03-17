@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* font-family: "Mulish", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color10: #232044;
+  --color20: #bcbacf;
+  --color30: #1b183c;
+  --color40: #322e59;
+  --color50: #ffbb56;
+  --color60: #c79011;
+  --color70: #ffffff;
+}
+
+body {
+  background-color: var(--color10);
+  color: var(--color20);
+  font-family: 'Merriweather', serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 30px;
+}
+
+.container {
+  max-width: 484px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: -2rem -2rem var(--color30);
+  border-radius: 10px;
+  background-color: var(--color40);
+  padding: 15px;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title-btn {
+  content: '?';
+  color: var(--color10);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -10px;
+  right: -10px;
+  background-color: var(--color50);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.title-primary {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: calc(2 / 1.5);
+  text-align: center;
+}
+
+.title-secondary {
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: calc(1.25 / 0.875);
+  max-width: 60ch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-input {
+  height: 58px;
+  border-radius: 8px;
+  background-color: var(--color20);
+  border: none;
+  padding: 0 10px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.selectedInput:focus {
+  box-shadow: 0 0 0 3px var(--color50);
+}
+
+.form-textarea {
+  height: 100px;
+  border-radius: 8px;
+  background-color: var(--color20);
+  border: none;
+  padding: 10px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-btn {
+  height: 55px;
+  border-radius: 8px;
+  background-color: var(--color50);
+  cursor: pointer;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.form-btn:hover {
+  background-color: var(--color60);
+}
+
+.form-info {
+  font-size: 0.875rem;
+  line-height: calc(1.25 / 0.875);
+  color: var(--color10);
+  background-color: var(--color70);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Mulish', sans-serif;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  display: none;
+  transition: 0.3s;
+}
+
+.form-info::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  border-left: 10px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 10px solid var(--color70);
+  width: 0;
+  height: 0;
+}
+
+.form-info span {
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+  line-height: calc(1.25 / 0.875);
+  font-family: 'Mulish', sans-serif;
+  transition: 0.3s;
+  display: none;
+}
+
+.active {
+  display: inline-block;
+}
+
+.footer {
+  font-size: 0.75rem;
+  line-height: calc(1 / 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+    color: var(--color20);
+    text-decoration: none;
+    font-weight: bold;
+}

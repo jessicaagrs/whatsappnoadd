@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Whatsapp sem Add Contato</title>
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1 class="title-primary">Whatsapp sem Adicionar Contato</h1>
+        <p class="title-secondary">
+          Informe um telefone com DD e uma mensagem (opcional), após clicar em
+          enviar você será redirecionado ao Whatsapp.
+        </p>
+        <button
+          class="title-btn"
+          id="info-button"
+        >
+          ?
+        </button>
+      </div>
+      <form class="form">
+        <input
+          type="tel"
+          placeholder="Telefone com DD"
+          class="form-input selectedInput"
+          name="phone"
+          value="55"
+        />
+        <p
+          class="error"
+          id="error"
+        >
+          Informe um número de telefone.
+        </p>
+        <textarea
+          class="form-textarea selectedInput"
+          placeholder="Mensagem (opcional)"
+          name="message"
+        ></textarea>
+        <button
+          type="submit"
+          class="form-btn"
+        >
+          Enviar
+        </button>
+        <div
+          class="form-info"
+          id="info-container"
+        >
+          <p>Exemplo formato para telefone: <span>55 11 999999999</span></p>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <p>
+        © 2025 Desenvolvido por
+        <a href="https://github.com/jessicaagrs" target="_blank">@jessicaagrs</a>. Todos os
+        direitos reservados.
+      </p>
+    </footer>
+
+    <script
+      type="module"
+      src="./js/index.js"
+    ></script>
+  </body>
+</html>
