@@ -64,6 +64,7 @@ body {
   background-color: var(--color50);
   border-radius: 50%;
   cursor: pointer;
+  border: none;
 }
 
 .title-primary {
@@ -97,10 +98,6 @@ body {
   outline: none;
 }
 
-.selectedInput:focus {
-  box-shadow: 0 0 0 3px var(--color50);
-}
-
 .form-textarea {
   height: 100px;
   border-radius: 8px;
@@ -121,10 +118,6 @@ body {
   font-size: 1rem;
   font-weight: bold;
   transition: background-color 0.3s;
-}
-
-.form-btn:hover {
-  background-color: var(--color60);
 }
 
 .form-info {
@@ -167,10 +160,6 @@ body {
   display: none;
 }
 
-.active {
-  display: inline-block;
-}
-
 .footer {
   font-size: 0.75rem;
   line-height: calc(1 / 0.75);
@@ -180,7 +169,21 @@ body {
 }
 
 .footer a {
-    color: var(--color20);
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--color20);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* globals */
+
+.active {
+  display: inline-block;
+}
+
+.selectedInput:focus {
+  box-shadow: 0 0 0 3px var(--color50);
+}
+
+.selectedButton:hover {
+  background-color: var(--color60);
 }
