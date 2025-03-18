@@ -27,12 +27,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  padding: 30px;
+  padding: 20px;
 }
 
 .container {
   max-width: 484px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -41,6 +40,7 @@ body {
   background-color: var(--color40);
   padding: 15px;
   position: relative;
+  margin: 0 0 0 30px;
 }
 
 .title {
@@ -131,9 +131,12 @@ body {
   font-family: 'Mulish', sans-serif;
   position: absolute;
   top: 20px;
-  left: 50%;
+  right: -10px;
+  left: auto;
   display: none;
   transition: 0.3s;
+  max-width: 300px;
+  transform-origin: right top;
 }
 
 .form-info::after {
@@ -164,9 +167,7 @@ body {
 .footer {
   font-size: 0.75rem;
   line-height: calc(1 / 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: 'Mulish', sans-serif;
 }
 
 .footer a {

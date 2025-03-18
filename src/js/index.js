@@ -8,12 +8,13 @@ buttonSubmit.addEventListener('click', event => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
   const phone = data.phone.trim().replace(/\s/g, '');
-
+  
   if (!data.phone || phone.length < 13) {
     viewError();
     return;
   }
-
+  
+  startLoading();
   let message = '';
   if (data.message.length > 0) {
     message = `Mensagem:%20${data.message}`;
@@ -21,7 +22,8 @@ buttonSubmit.addEventListener('click', event => {
   const URL = `https://wa.me/${phone}?text=${message}`;
   setTimeout(() => {
     window.open(URL, '_blank');
-  }, 1000);
+    stopLoading();
+  }, 2000);
 
   form.reset();
 });
@@ -59,4 +61,14 @@ function viewError() {
   setTimeout(() => {
     errorContainer.classList.remove('active');
   }, 4000);
+}
+
+function startLoading() {
+  buttonSubmit.textContent = 'Aguarde...';
+  buttonSubmit.disabled = true;
+}
+
+function stopLoading() {
+  buttonSubmit.textContent = 'Enviar';
+  buttonSubmit.disabled = false;
 }
